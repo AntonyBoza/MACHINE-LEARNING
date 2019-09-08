@@ -1,0 +1,21 @@
+
+Statistical Thinking in Python (Part 2)
+Age and bone_density are assumed to be NEGATIVELY correlated. 
+Implement a permutation test for the hypothesis of a null correlation. 
+The function pearson_r()is already in your namespace. 
+Complete the code to return the output 
+
+# Compute observed correlation
+obs = pearson_r(age,bone_density)
+# Draw repl. of correlation
+reps = np.empty(10000)
+for i in range(10000):
+    age_perm = np.random.permutation(age)
+    reps[i] = pearson_r(age_perm,bone_density)
+# Compute and print p-value
+p = np.sum(reps <= obs) / len(reps)
+print('p-value =', p)
+
+Output: p-value = 0.0001
+
+
