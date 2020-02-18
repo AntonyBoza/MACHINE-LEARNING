@@ -1,4 +1,4 @@
 # MachineLearning
-Machine learning projects 
+Machine learning projects, 
 Machine learning books
-Articles
+& Articles
